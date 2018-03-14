@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>VISIONMall</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link href="css/item.css" type="text/css" rel="stylesheet">
+	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+</head>
+<body>   
+	<div id ="header">
+		<div class="header-logo">
+			<a href="index.html" class="login-link" title="VISION首页"><img src="image/shoppingcart.png" class="logo-icon"></a>
+			<div class="logo-text"><a href="index.html" class="login-link1" title="VISION商城">VISIONMall.com</a></div>
+		</div>				
+		<div class="login-text">	
+		    <a href="login.html" class="login-link"><font class="login-text-style">登录</font><a/>
+		      <span style="margin-left:25px;"></span>
+		    <a href="register.html" class="login-link"><font class="login-text-style">注册</font></a>
+		      <span style="margin-left:25px;"></span>
+		    <b class="login-link2"><font class="login-text-style">购物车</font></b>
+		</div>
+		<div class="user-logo"><img src="image/user.png" class="user-icon"></div>
+		<div id="shop-list">		    
+		    <table class="shop-table">
+		    <span></span>
+		        <thead class="table-head">
+		            <tr class="th-1"><td colspan="3">我的购物车</td></tr>
+		            <tr class="th-2"><td class="td-1">序号</td><td>名称</td><td>价格</td></tr>
+		        </thead>
+		        <tbody class="table-body">
+		            <tr><td class="td-1">01</td><td>街头风字母拉链长连衣裙</td><td>￥159.00</td></tr>
+		            <tr><td class="td-1">02</td><td>街头风条纹字母露脐打底装</td><td>￥149.00</td></tr>
+		            <tr><td class="td-1">03</td><td>男士嘻哈街头字母背心T恤</td><td>￥79.00</td></tr>
+		            <tr><td class="td-1">04</td><td>男士嘻哈街头字母棒球T恤</td><td>￥129.00</td></tr>
+		            <tr><td class="td-1">05</td><td>街头VISION纯色卫衣</td><td>￥79.00</td></tr>
+		        </tbody>
+                <tfoot class="table-foot">
+                    <tr class="th-3"><td colspan="2" class="td-1">总价</td><td>￥595.00</td></tr>
+                    <tr class="th-4"><td colspan="3"><input type="button" name="total" value="去支付" class="pay-button"></td></tr>
+                </tfoot>
+		    </table>
+		</div>
+	</div>
+	<div id="con"></div>
+	<div id="body-control">
+	    <div id="item">
+	        <div id="item-picture">
+                <canvas id="canvas" width="400px" height="400px">
+		          您的浏览器不支持canvas标签                      
+                </canvas>
+                <div id="item-list">
+		            <div class="item-classify">
+		                <img src="image/item4-1.jpg" class="classify-image">
+		            </div>
+		            <div class="item-classify">
+		            <img src="image/item4-2.jpg" class="classify-image">
+		            </div>
+		            <div class="item-classify">
+		            <img src="image/item4-3.jpg" class="classify-image">
+		            </div>
+                </div>
+	        </div>
+            <canvas id="canvas-draw" width="400px" height="400px"></canvas>
+	        <div id="item-choose">
+	            <div class="item-name">
+	                <img src="image/item.png" class="item-logo"><h2 class="item-title">VISIONSTREETWEAR板鞋</h2>
+	            </div>	        
+	            <div class="item-price">
+	                <div class="tip">价格</div>￥155.00
+	            </div>
+	            <div class="item-size">
+	                <div class="tip">尺寸</div>
+                    <div class="choose">39</div>
+                    <div class="choose">40</div>
+                    <div class="choose">41</div>
+                    <div class="choose">42</div>
+	            </div>
+	            <div class="item-color">
+	                <div class="tip">颜色</div>
+	                <div class="choose">黑色</div>
+                    <div class="choose">粉色</div>
+                    <div class="choose">红色</div>
+	            </div>
+	            <div class="item-amount">
+                    <div class="tip">数量</div>
+	                <input type="button" name="reduce" value="-" id="reduce" onclick="reduce()">
+	                <input type="text" name="number" value="1" size="3"  id="number" onBlur="number()">
+	                <input type="button" name="add" value="+"
+	                id="add" onclick="add()">件(库存99件)
+	            </div>
+                <div class="item-amount">
+                    <div class="mr-form-content address">
+                    配送至：
+                        <select class="item-select" name="select">
+                            <option value="浙江省">浙江省</option>
+                            <option value="江苏省">江苏省</option>
+                        </select>
+                        <select class="item-select" name="select">
+                            <option value="杭州市">杭州市</option>
+                            <option value="南京市">南京市</option>
+
+                        </select>
+                        <select class="item-select" name="select">
+                            <option value="西湖区">西湖区</option>
+                            <option value="上城区">上城区</option>
+                            <option value="下城区">下城区</option>
+                            <option value="玄武区">玄武区</option>
+                            <option value="秦淮区">秦淮区</option>
+                            <option value="建邺区">建邺区</option>
+                        </select>快递10元
+                    </div>                     
+                </div>                
+	              <div class="item-buy">
+                    <input type="button" name="buy-now" value="立即购买" class="buy-btn" id="buy-btn">
+                    <input type="button" name="shopping-cart" value="加入购物车" class="buy-btn" id="buy-btn" >
+                </div>
+	        <div>
+        </div>
+	</div>
+
+    <div id="con"></div>
+    <div id="body-control">
+    <div class="shop-inf">
+        <div class="shop-title">
+            <h3>商品详情</h3>
+            <hr>
+        </div>
+        
+        <div class="shop-inf-list">
+            <img src="image/shop-inf.jpg" class="shop-inf-cut">
+        </div>
+
+        <div class="shop-title">
+            <h3>商品展示</h3>
+            <hr>
+        </div>
+        
+        <div class="shop-inf-image">
+            <img src="image/item4-0.jpg" class="shop-image">
+            <img src="image/item4-1.jpg" class="shop-image">
+            <img src="image/item4-2.jpg" class="shop-image">
+            <img src="image/item4-3.jpg" class="shop-image">
+        </div>
+        <div class="shop-title">
+            <h3>价格说明</h3>
+            <hr>
+        </div>
+        <div class="shop-inf-list">
+            <p><h4>划线价格</h4></p>
+
+            <p style="color:#999999;">指商品的专柜价、吊牌价、正品零售价、厂商指导价或该商品的曾经展示过的销售价等，并非原价，仅供参考。</p>
+
+            <p><h4>未划线价格</h4></p>
+
+            <p style="color:#999999;">指商品的实时标价，不因表述的差异改变性质。具体成交价格根据商品参加活动，或会员使用优惠券、积分等发生变化，最终以订单结算页价格为准。</p>
+
+             <p style="color:#999999;">此说明仅当出现价格比较时有效，具体请参见《淘宝价格发布规范》。若商家单独对划线价格进行说明的，以商家的表述为准。</p>
+        </div>
+    </div>
+    </div>
+    <div id="con"></div>
+	<div id="footer">
+		<div class="footlist">
+			<ul class="footlist-style">
+				<li><b>更多信息</b></li>
+				<li class="footlist-text">特价信息</li>
+				<li class="footlist-text">礼券信息</li>
+				<li class="footlist-text">订单信息</li>
+				<li class="footlist-text">订单历史</li>
+			</ul>
+		</div>
+		<div class="footlist">
+			<ul class="footlist-style">
+				<li ><b>客户服务</b></li>
+				<li class="footlist-text">关于我们</li>
+				<li class="footlist-text">加入我们</li>
+				<li class="footlist-text">合作品牌</li>
+				<li class="footlist-text">友情链接</li>
+			</ul>
+		</div>
+		<div class="footlist">
+			<ul class="footlist-style">
+				<li><b>服务协议</b></li>
+				<li class="footlist-text">隐私声明</li>
+				<li class="footlist-text">常见问题</li>
+				<li class="footlist-text">留言反馈</li>
+				<li class="footlist-text">法律投诉声明</li>
+			</ul>
+		</div>
+		<div class="footlist">
+			<ul class="footlist-style">
+				<li><b>联系我们</b></li>
+				<li class="footlist-text">地址</li>
+				<li class="footlist-text">电话</li>
+				<li class="footlist-text">邮箱</li>
+			</ul>
+		</div>
+	</div>
+	<div id="con"></div>
+	<div id="footer2">
+		<div class="footer-inf">Copyright © 2017.Company name All rights reserved</div>
+		<div class="footer-inf1">袁均 计152 15103330231</div>
+	</div>
+
+<!-- 底部script部分 -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+	<script type="text/javascript">
+        function reduce(){
+            var subtraction = document.getElementById("reduce");   
+            var number = document.getElementById("number");
+            if (number.value<=1) {
+                number.value = 1;
+            }else {
+                number.value = number.value - 1;
+            }
+        }
+        function number(){
+            var number = document.getElementById("number");
+            var value = number.value;
+            if (value=="") {
+                number.value = 1;
+            }
+            if (isNaN(value)) {
+                number.value = 1;
+            }
+            if (parseInt(value)<=1) {
+                number.value = 1;
+            }
+        }
+        function add(){
+            var add = document.getElementById("add");
+            var number = document.getElementById("number");
+            number.value = parseInt(number.value)+1;
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(".choose").click(function () {
+        $(this).toggleClass("selected");
+        });
+    </script>
+  
+<!-- CANVAS放大 -->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#canvas-draw").hide();
+        $("#canvas").mouseover(function(){
+        $("#canvas-draw").show();
+        });
+
+        $("#canvas").mouseout(function(){
+        $("#canvas-draw").hide();
+        });
+    }) 
+    </script>
+
+	<script>
+        var clo = document.getElementById("canvas");//原图
+        var hidedraw = document.getElementById("canvas-draw");//放大的图
+        var bbox = clo.getBoundingClientRect();//获取画布坐标
+        var ctx = clo.getContext("2d");
+        var ctxh = hidedraw.getContext("2d");
+        //原图尺寸比例
+        var Ex=1080/400;
+        var Ey=1080/400;  
+        image=new Image();
+        image.src="image/item4-0.jpg";  
+        function drawBg(){//清除重画
+            ctx.clearRect( 0 , 0 , clo.width , clo.height) ; 
+            ctx.drawImage(image,0,0,400,400);
+            
+        }
+        window.onload=function(){
+            drawBg();
+            clo.onmousemove = function(e){//鼠标在画内移动时
+                //鼠标相对于画布坐标
+                var x =  e.clientX - bbox.left * (clo.width/bbox.width);
+                var y = e.clientY - bbox.top * (clo.height/bbox.height);                    
+                drawBg();              
+                drawjudge(x,y);       
+            }
+            clo.onmouseout = function(e){//鼠标离开时清除
+                drawBg();
+            }
+        }
+        function chan(x,y){//画框
+        ctx.beginPath();
+        ctx.rect(x,y,200,200);
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = "#6F93AD";
+        ctx.fillStyle = "rgba(111,147,197,0.5)";
+        ctx.fill();
+        ctx.stroke();
+        }
+        function drawjudge(x,y){//判断并画图
+            
+            var sx=x-100,sy=y-100;
+            if(x-100<0){
+                sx=0;
+            }else if(x+100>400){
+                sx=200;
+            }
+            if(y-100<0){
+                sy=0;
+            }else if(y+100>400){
+                sy=200;
+            }
+             ctxh.drawImage( image ,sx*Ex , sy*Ey ,200*Ex,200*Ey,0,0,400, 400 );//画放大图
+            chan(sx,sy);
+        } 
+  </script> 
+
+
+  <script type="text/javascript">
+    $(function(){
+        $("#item-list img").bind("click", function(){
+            var imgSrc = $(this).attr("src");
+            var img = "<img src='"+imgSrc+"' alt='' />";          
+            $("#canvas").html(img);
+        });
+    })
+</script>
+
+<!-- 购物车 -->
+    <script type="text/javascript">
+    $(document).ready(function(){ 
+
+    	$(".login-link2").hover(function(){
+
+    		$("#shop-list").fadeIn(750).css('display','block');
+    	})
+    	$("#shop-list").mouseleave(function(){
+
+    		$("#shop-list").slideUp(500).css('display','none');
+    	});
+    	})	    	
+    </script>	
+
+    <script type="text/javascript">
+    $(function(){  
+            strSel =[];
+            $("#buy-btn").click(function(){            
+            $(".item-select").each(function(index, element){
+                     strSel += $(this).val() + ",";
+                 });
+                alert("你选择的配送地址是："+strSel);
+            }); 
+        });
+    </script>    
+</body>
+</html>

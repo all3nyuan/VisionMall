@@ -1,0 +1,244 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors yuan jun (you@example.org)
+ * @date    2017-10-03 12:22:08
+ * @version $Id$
+ */
+body{
+	margin:0 auto;
+}
+#body-control{
+	margin:0 auto;
+	width: 1349px;
+}
+
+#header{
+	height: 60px;
+	width: 100%;	
+	background-color:#FFFFFF;
+	text-align: left;
+	box-shadow:0px 1px 2px #D3D2D2;
+}
+.header-logo{
+	height:60px;
+	width: 35%;
+	float: left;
+	margin-left: 135px;
+}	
+.logo-icon{
+	float:left;
+	height: 60px;
+	width: 60px;
+}
+.logo-text{
+	height: 50px;
+	float:left;
+	text-align: left;
+	font-size: 40px;
+	font-family: "Microsoft YaHei";
+	font-weight: bold;
+	margin-top: 8px;
+	margin-left: 10px;
+	color: #000000;
+}
+.user-logo{
+	height: 50px;
+	width: 3%;
+	text-align: center; 
+	float: right;
+	cursor:pointer;
+	margin-top: 8px;
+}
+.user-icon{
+	height: 50px;
+	width: 50px;		
+}
+
+.login-text{
+	height: 30px;
+	width: 18%;
+	float: right;
+	text-align: left;
+	font-size: 17px;
+	font-family: "Microsoft YaHei";	
+	cursor:pointer;
+	margin-right: 20px;
+	margin-top: 30px;
+	margin-left: 25px;
+}
+
+.login-link{
+	text-decoration: none;
+	color: #6C7377;
+}
+.login-link:hover{
+	color: #000000;
+}
+.login-link1{
+	text-decoration: none;
+	color: #000000;
+}
+
+#con{
+	clear: both;
+	height: 0px;
+}
+
+#register{
+	height: 550px;
+}
+.web-icon{
+	float: left;	
+	height: 250px;
+	width: 250px;
+	margin-top: 120px;
+	margin-bottom: 100px;
+	margin-left: 300px;
+}
+.delimiter{	
+	float: left;
+	height:350px; 
+	width:3px; 
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-left: 75px;
+	margin-right: 75px;
+	border-left: 3px #000000 solid;
+
+}
+.register-form{
+	float: left;
+	height: 500px;
+	width: 400px;
+	margin-bottom: 50px;
+	margin-right: 200px;
+	margin-top: 25px;
+}
+.form-title{
+	text-align: center;
+}
+.h3-style{
+	line-height: 1;
+}
+.text-username{
+	height: 25px;
+	width: 400px;
+	font-size: 20px;
+	border-top-style: none;
+	border-left-style: none;
+	border-right-style: none;
+	border-bottom: 1px #000000 solid;
+	outline:none;
+}
+.text-password{
+	height: 25px;
+	width: 400px;
+	font-size: 20px;
+	border-top-style: none;
+	border-left-style: none;
+	border-right-style: none;
+	border-bottom: 1px #000000 solid;
+	outline:none;
+}
+.text-email{
+	height: 25px;
+	width: 400px;
+	font-size: 20px;
+	border-top-style: none;
+	border-left-style: none;
+	border-right-style: none;
+	border-bottom: 1px #000000 solid;
+	outline:none;
+
+}
+.text-password-confirm{
+	height: 25px;
+	width: 400px;
+	font-size: 20px;
+	border-top-style: none;
+	border-left-style: none;
+	border-right-style: none;
+	border-bottom: 1px #000000 solid;
+	outline:none;
+}
+.terms{
+	margin-top: 10px;
+}
+.remember-text{
+	color: #969494;
+}
+.remember-box{
+	height:13px;
+	width:13px;
+	background-color: #FFF; 
+	}
+.register-button{
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 125px;
+	height: 45px;
+	width: 150px;
+	border:2px #000000 solid;
+	background-color: #FFFFFF;
+	font-size: 18px;
+	font-family: "微软雅黑";
+	font-weight: bolder;
+	outline:none;
+	cursor: pointer;
+}
+
+#footer{
+	height: 200px;
+	width: 100%;
+	background-color: #E3DDDD;
+	cursor:pointer;
+}
+.footlist{
+	float: left;
+	height: 150px;
+	width: 20%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 60px;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+}
+.footlist-style{
+	list-style: none;
+}
+.footlist-text{
+	color: #6A6767;
+	margin-top: 10px;
+}
+.footlist-text:hover{
+	text-decoration: underline;
+	color:#ED8E1B; /*#E18B51*/
+
+}
+
+#footer2{
+	height: 50px;
+	width: 100%;
+	background-color: #5D5D5D;
+
+}
+.footer-inf{
+	float: left;
+	margin-left: 50px;
+	margin-top: 20px;
+	font-family: "Microsoft YaHei";
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 300;
+	
+}
+.footer-inf1{
+	float: right;
+	margin-top: 20px;
+	margin-right: 50px;
+	font-family: "新宋体";
+	color: #E4E4E4;
+	font-size: 18px;
+	font-weight: 500;
+}
